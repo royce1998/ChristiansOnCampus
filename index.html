@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>UChicago Christians on Campus</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		.container{
+			padding: 10vh 7.5vw;
+			min-height: 100vh;
+		}
+		.person{
+			border: 0.625vw solid transparent;
+			margin-bottom: 1.5625vw;
+			width: 80%;
+			opacity: 0.85;
+		}
+		.person2{ /* person2 is circle for testimonies */
+			border: 0.625vw solid transparent;
+			margin-bottom: 1.5625vw;
+			width: 80%;
+			opacity: 0.9;
+		}
+		.person:hover{
+			border-color: #990000;
+		}
+		.carousel-inner img{
+			-webkit-filter: sepia(0%); /* idk man i think this filter is pretty gud */
+			filter: sepia(0%);
+			width: 100%;
+			margin: auto;
+			max-height: 100vh;
+		}
+		.carousel-caption{
+			color: #fff !important;
+		}
+		@media (max-width: 100vh){
+			.carousel-caption{
+				display: none; /* no caption on small screens cuz doesn't fit v well */
+			}
+			.logo{
+				display: none; /* no caption on small screens cuz doesn't fit v well */
+			}
+		}
+		.nav-tabs li a{
+			color: #777;
+		}
+		.navbar {
+			margin-bottom: 0;
+			background-color: #2d2d30;
+			border: 0;
+			font-size: 11px !important;
+			letter-spacing: 0.25vw;
+			opacity:0.9;
+		}
+
+		.navbar li a{ 
+			color: #d5d5d5 !important;
+		}
+		
+		.navbar .navbar-brand{
+			color: #d5d5d5 !important;
+			padding-top: 0.125vw;
+			padding-bottom: 0px;
+		}
+
+		.navbar-nav li a:hover {
+			color: #fff !important;
+		}
+
+		/* The active link */
+		.navbar-nav li.active a {
+			color: #fff !important;
+			background-color:#29292c !important;
+		}
+
+		.navbar-default .navbar-toggle {
+			border-color: transparent;
+		}
+
+		.open .dropdown-toggle {
+			color: #fff ;
+			background-color: #555 !important;
+		}
+
+		.dropdown-menu li a {
+			color: #000 !important;
+		}
+
+		.dropdown-menu li a:hover {
+			background-color: red !important;
+		}
+		body {
+			font: 400 15px/1.8 Lato, sans-serif;
+			color: #777;
+		}
+
+		.navbar {
+			font-family: Montserrat, sans-serif;
+		}
+		h3, h4 {
+			margin: 5px 0 5px 0;
+			font-size: 24px;
+		}
+		.form-control {
+			border-radius: 0;
+		}
+		textarea {
+			resize: none;
+		}
+		.parallax { 
+			background-image: url("tabling.jpg");
+
+			height: 100vh; 
+
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#welcomeHeader{display:none;}
+		h1 {
+			font-weight: bold;
+			color: #ffffff;
+			font-size: 10vh;
+			font-family: verdana;
+			
+		}
+		
+		.parallax2 { 
+			background-image: url("tablingblurred.jpg");
+
+			height: 100vh; 
+
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		} 
+		.nav-pills>li>a:hover {
+			color: #5D0F0D;
+		}
+		.nav-pills>li>a {
+			color: maroon;
+		}
+		.nav-pills>li.active>a, 
+		.nav-pills>li.active>a:focus, 
+		.nav-pills>li.active>a:hover {
+			color: #fff;
+			background-color: maroon;
+		}
+	</style>
+	
+</head>
+
+
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
+	
+	<div id="welcome" class="container-fluid parallax">
+		<h1 id="welcomeHeader" align="center" class="parallax2">
+			<br /><br /><br /><span style="font-size: 7vh;">Welcome to</span><br />Christians on Campus<br /><br />
+			<div align="center"><img src="uchicagologo.png" class="img-responsive" width="500"></div>
+		</h1>
+		<script>
+			$(document).ready(function () {
+				$("#welcomeHeader").fadeIn(2700);
+			});
+		</script>
+	</div>
+
+	<div id="slideshow" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#slideshow" data-silde-to="0" class="active"></li>
+			<li data-target="#slideshow" data-silde-to="1"></li>
+			<li data-target="#slideshow" data-silde-to="2"></li>
+		</ol>
+		
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img class="img-responsive" src="frankiehome.jpg" alt="Metro College Gathering">
+				<div class="carousel-caption">
+					<h3>We welcome everyone!</h3>
+					<p>We warmly receive all believers as our brothers and sisters in Christ.</p>
+				</div>
+			</div>
+			<div class="item">
+				<img class="img-responsive" src="home-meeting.jpg" alt="Home Meeting">
+				<div class="carousel-caption">
+					<h3>Come to our home meeting!</h3>
+					<p>Our home meetings are held on Friday evenings at a saint's home in Hyde Park.</p>
+				</div>
+			</div>
+			<div class="item">
+				<img class="img-responsive" src="uncropped-metro.jpg" alt="Welcome">
+				<div class="carousel-caption">
+					<h3>Attend one of our metro college gatherings!</h3>
+					<p>About once a month, we blend with Christians on Campus groups from nearby colleges.</p>
+				</div>
+			</div>
+		</div>
+		
+		<!--The controls (below) for the carousel don't really work but whatevs-->
+		<a class="left carousel-control" href="#slideshow" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#slideshow" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+
+	<div id="about" class="container">
+		<style>
+		.logo {
+			font-size: 200px;
+		}
+		@media screen and (max-width: 48vw) {
+			.col-sm-4 {
+				text-align: center;
+				margin: 1.5625vh 0;
+			}
+		}
+		</style>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-8">
+					<h2>About Us</h2>
+					<h4>Christians on Campus is a medium-sized Christian Organization composed of graduate and undergraduate students.</h4> 
+					<p>We are connected with other Christians in Hyde Park and have Friday night fellowship in some of the homes of students and the commnunity believers. 
+					We learn about the Lord through directly studying the Bible, and using helpful supplementary ministry reading to better our understanding,
+					including the teachings of two Christian ministers, Watchman Nee and Witness Lee.</p>
+					<a href="https://www.facebook.com/uchicagochristians/"><button class="btn btn-default btn-lg">Our Facebook Page</button></a>
+				</div>
+				<div class="col-sm-4">
+					<br /><img src="logohalf.png" height="500" width="500" class="img-responsive">
+				</div>
+			</div>
+		</div>
+		<br /><br />
+		<div class="container-fluid bg-grey">
+			<div class="row">
+				<div class="col-sm-4">
+				<span class="glyphicon glyphicon-globe logo" style="color:maroon;font-size:14vw"></span> 
+				</div>
+				<div class="col-sm-8">
+				<h2>Our Community</h2>
+				<h4>We also connect with Christian students from other campuses in the Chicago area such as Univeristy of Illinois in Chicago, DePaul, and Northwestern.</h4> 
+				<p>Please join us at our Monday and Wednesday Lunch time Bible studies in Bartlett and Hutch commons, or
+					<a href="https://lists.uchicago.edu/web/subscribe/christiansoncampus" data-toggle="tooltip" title="Click to subscribe!">subscribe to our listhost</a>
+					to find out more information about other activities.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div style="background-color:#F6F6F6"><div id="activities" class="container text-center">
+	  <h3>Activities</h3>
+	  <p><i>What we do!</i></p>
+	  <p>Remember to <a href="https://lists.uchicago.edu/web/subscribe/christiansoncampus" data-toggle="tooltip" title="Click to subscribe!">subscribe to our listhost</a> (emailing service) for updates!</p>
+	  <br>
+	  <div class = "row">
+		<div class="col-sm-4">
+			<p><strong>Bible Study</strong></p><br>
+			<a href="#bible-study-info" data-toggle="collapse">
+				<img src="bible-study.jpg" class="img-circle person" alt="Bible Study">
+			</a>
+			<div id="bible-study-info" class="collapse in">
+				<p>Read the Bible and discuss with friends</p>
+				<p>Every Monday 12:30 - 2:30 at Bartlett</p>
+				<p>Every Wednesday 12:30 - 2:30 at Hutchinson</p>
+				<br />
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<p><strong>Home Meeting</strong></p><br>
+			<a href="#home-meeting-info" data-toggle="collapse">
+				<img src="home.jpg" class="img-circle person" alt="Home Meeting">
+			</a>
+			<div id="home-meeting-info" class="collapse in">
+				<p>Home Meetings are on Fridays of each week</p>
+				<p>The saints of Hyde Park come together to eat, sing, and fellowship</p>
+				<br />
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<p><strong>Metro College Gathering</strong></p><br>
+			<a href="#metro-gathering-info" data-toggle="collapse">
+				<img src="metro-gathering.jpg" class="img-circle person" alt="Metro College Gathering">
+			</a>
+			<div id="metro-gathering-info" class="collapse in">
+				<p>We have monthly gatherings with Christians from other nearby colleges</p>
+				<p>It's a wonderful time of blending and encouragement</p>
+				<br />
+			</div>
+		</div>
+	  </div>
+	</div></div>
+
+	<div id="testimonies" class="container">
+		<h3 class="text-center">Testimonies</h3>
+		<br />
+		<ul class="nav nav-pills nav-justified">
+			<li class="active"><a data-toggle="tab" href="#first"><span style="font-family: verdana">Scott</span></a></li>
+			<li><a data-toggle="tab" href="#second"><span style="font-family: verdana">Mary</span></a></li>
+			<li><a data-toggle="tab" href="#third"><span style="font-family: verdana">Steven<span></a></li>
+			<li><a data-toggle="tab" href="#fourth"><span style="font-family: verdana">Maria</span></a></li>
+		</ul>
+		<div class="tab-content">
+			<div id="first" class="tab-pane fade in active">
+				<div align="center" class="col-sm-4">
+					<br />
+					<img src="scott.jpg" class="img-circle person2" alt="Bible Study">
+					<h2>Scott, Chemistry Graduate Student</h2>
+				</div>
+				<p><br />In to am attended desirous raptures declared diverted confined at.
+				Collected instantly remaining up certainly to necessary as. Over walk dull into son
+				boy door went new. At or happiness commanded daughters as. Is handsome an declared at
+				received in extended vicinity subjects. Into miss on he over been late pain an. Only
+				week bore boy what fat case left use. Match round scale now sex style far times. Your me past an much. ]
+				It allowance prevailed enjoyment in it. Calling observe for who pressed raising his. Can connection
+				instrument astonished unaffected his motionless preference. Announcing say boy precaution unaffected
+				difficulty alteration him. Above be would at so going heard. Engaged at village at am equally proceed.
+				Settle nay length almost ham direct extent. Agreement for listening remainder get attention law
+				acuteness day. Now whatever surprise resolved elegance indulged own way outlived. Insipidity the
+				sufficient discretion imprudence resolution sir him decisively. Proceed how any engaged visitor.
+				Explained propriety off out perpetual his you. Feel sold off felt nay rose met you. We so entreaties
+				cultivated astonished is. Was sister for few longer mrs sudden talent become. Done may bore quit evil
+				old mile. If likely am of beauty tastes. <br />
+				Settle nay length almost ham direct extent. Agreement for listening remainder get attention law
+				acuteness day. Now whatever surprise resolved elegance indulged own way outlived. Insipidity the
+				sufficient discretion imprudence resolution sir him decisively. Proceed how any engaged visitor.
+				Explained propriety off out perpetual his you. Feel sold off felt nay rose met you. We so entreaties
+				cultivated astonished is. Was sister for few longer mrs sudden talent become. Done may bore quit evil
+				old mile. If likely am of beauty tastes.</p>
+			</div>
+			<div id="second" class="tab-pane fade">
+				<div align="center" class="col-sm-4">
+					<br />
+					<img src="mary.jpg" class="img-circle person2" alt="Bible Study">
+					<h2>Mary, Scott's Wife (will change this title later lol)</h2>
+				</div>
+				<p><br />Ok i'm gonna write more random stuff here and ok okokokokokokok zzzzzzzz
+				zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+				hmmm should I make this one shorter? nah i think i'll make this one longer
+				than scott's to see how it fits on the page. ok i need to add more stuff to make
+				it long but i dont want to keep typing omg i want to copy and paste
+				ok how about i just copy and paste this a bunch of times and we can see how it ends
+				up looking? ok good i'll copy and paste starting in 3.. 2.. 1... NOWW
+				Ok i'm gonna write more random stuff here and ok okokokokokokok zzzzzzzz
+				zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+				hmmm should I make this one shorter? nah i think i'll make this one longer
+				than scott's to see how it fits on the page. ok i need to add more stuff to make
+				it long but i dont want to keep typing omg i want to copy and paste
+				ok how about i just copy and paste this a bunch of times and we can see how it ends
+				up looking? ok good i'll copy and paste starting in 3.. 2.. 1... NOWW
+				Ok i'm gonna write more random stuff here and ok okokokokokokok zzzzzzzz
+				zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+				hmmm should I make this one shorter? nah i think i'll make this one longer
+				than scott's to see how it fits on the page. ok i need to add more stuff to make
+				it long but i dont want to keep typing omg i want to copy and paste
+				ok how about i just copy and paste this a bunch of times and we can see how it ends
+				up looking? ok good i'll copy and paste starting in 3.. 2.. 1... NOWW
+				Ok i'm gonna write more random stuff here and ok okokokokokokok zzzzzzzz
+				zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+				hmmm should I make this one shorter? nah i think i'll make this one longer
+				than scott's to see how it fits on the page. ok i need to add more stuff to make
+				it long but i dont want to keep typing omg i want to copy and paste
+				ok how about i just copy and paste this a bunch of times and we can see how it ends
+				up looking? ok good i'll copy and paste starting in 3.. 2.. 1... NOWW
+				Ok i'm gonna write more random stuff here and ok okokokokokokok zzzzzzzz
+				zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+				hmmm should I make this one shorter? nah i think i'll make this one longer
+				than scott's to see how it fits on the page. ok i need to add more stuff to make
+				it long but i dont want to keep typing omg i want to copy and paste
+				ok how about i just copy and paste this a bunch of times and we can see how it ends
+				up looking? ok good i'll copy and paste starting in 3.. 2.. 1... NOWW</p>
+			</div>
+			<div id="third" class="tab-pane fade">
+				<div align="center" class="col-sm-4">
+					<br />
+					<img src="steven.jpg" class="img-circle person2" alt="Bible Study">
+					<h2>Steven, Math spec. Econ Undergraduate Student</h2>
+				</div>
+				<p><br />ok im bored we already have two examples of a shorter one and a longer one
+				so im not gonna write much here</p>
+			</div>
+			<div id="fourth" class="tab-pane fade">
+				<div align="center" class="col-sm-4">
+					<br />
+					<img src="maria.jpg" class="img-circle person2" alt="Bible Study">
+					<h2>Maria, idk what major man</h2>
+				</div>
+				<p><br />so done with dis</p>
+			</div>
+			
+		</div>
+	</div>
+
+	<div style="background-color:#F6F6F6"><div id="contact" class="container">
+		<h3 class="text-center">Contact</h3>
+		<p class="text-center"><em>Don't hesitate to ask us questions!</em></p>
+		<div class="row test">
+			<div class="col-md-4">
+				<p>Reach out to us and we'll get back to you within 48 hours!</p>
+				<p><span class="glyphicon glyphicon-map-marker"></span>Chicago, US</p>
+				<p><span class="glyphicon glyphicon-phone"></span>Phone: +01 4088988188</p>
+				<p><span class="glyphicon glyphicon-envelope"></span>Email: coc@uchicago.edu</p> 
+			</div>
+			<div class="col-md-8">
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+					</div>
+					<div class="col-sm-6 form-group">
+						<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+					</div>
+				</div>
+				<textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+				<div class="row">
+					<div class="col-md-12 form-group">
+						<button class="btn pull-right" data-toggle="modal" data-target="#myModal" type="submit">Send</button>
+						<div class="modal fade" id="myModal" role="dialog">
+							<div class="modal-dialog">
+							
+							  <!-- Modal content-->
+							  <div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h4 class="modal-title">Sorry, that button does not work!</h4>
+								</div>
+								<div class="modal-body">
+									<p>The send button on the contact form is under construction. Please direct any questions by email to coc@uchicago.edu.
+									We apologize for the inconvenience. Meanwhile, please do enjoy this video of our 2017 trip to Korea:</p>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/pE0Hkaq1PYU" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+							  
+							</div>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</div>
+		<style>
+		#googleMap {
+			width: 100%; /* Span the entire width of the screen */
+			height: 50vh; /* Set the height to 400 pixels */
+		}
+		</style>
+
+		<!-- Add Google Maps -->
+		<div id="googleMap"></div>
+		<script>
+		function myMap() {
+		var myCenter = new google.maps.LatLng(41.7886079, -87.600902);
+		var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+		var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		var marker = new google.maps.Marker({position:myCenter});
+		marker.setMap(map);
+		}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGtTsNobUCPF4gwcVZhKi_VTcNDQfV30k&callback=myMap"></script>
+	</div></div>
+
+	<div class="jumbotron text-center" style="background-color:white">
+		<h1>Interested?</h1> 
+		<a href="https://lists.uchicago.edu/web/subscribe/christiansoncampus"><button type="button" class="btn btn-default btn-lg">Send Me Emails!</button></a>
+	</div>
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span> 
+				</button>
+				<a class="navbar-brand" href="#welcome"><img class="img-responsive" src="logo2.png"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#welcome">HOME</a></li>
+					<li><a href="#about">ABOUT</a></li>
+					<li><a href="#activities">ACTIVITIES</a></li>
+					<li><a href="#testimonies">TESTIMONIES</a></li>
+					<li><a href="#contact">CONTACT</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="https://www.youtube.com/watch?v=pE0Hkaq1PYU">Trip to Korea 2017 Video</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<style>
+	footer {
+		background-color: #2d2d30;
+		color: #f5f5f5;
+		padding: 2vw;
+	}
+
+	footer a {
+		color: #f5f5f5;
+	}
+
+	footer a:hover {
+		color: #777;
+		text-decoration: none;
+	}
+	</style>
+
+	<footer class="text-center">
+		
+	  <a class="up-arrow" href="#welcome" data-toggle="tooltip" title="TO TOP">
+		<span class="glyphicon glyphicon-chevron-up"></span>
+	  </a><br><br>
+	  <p>Website Designed By A Jesus-Lover</p> 
+	</footer>
+
+	<script>
+	$(document).ready(function(){
+		// Initialize Tooltip
+		$('[data-toggle="tooltip"]').tooltip(); 
+	})
+	
+	/* I just copied smooth scroll script from another source lol*/
+	$(document).ready(function(){
+	  // Add smooth scrolling to all links in navbar + footer link
+	  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+	  // Make sure this.hash has a value before overriding default behavior
+	  if (this.hash !== "") {
+
+		// Prevent default anchor click behavior
+		event.preventDefault();
+
+		// Store hash
+		var hash = this.hash;
+
+		// Using jQuery's animate() method to add smooth page scroll
+		// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+		$('html, body').animate({
+		  scrollTop: $(hash).offset().top
+		}, 900, function(){
+
+		  // Add hash (#) to URL when done scrolling (default click behavior)
+		  window.location.hash = hash;
+		  });
+		} // End if 
+	  });
+	})
+	</script>
+	
+</body>
+</html>
